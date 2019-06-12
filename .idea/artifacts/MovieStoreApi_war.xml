@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MovieStoreApi:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>MovieStoreApi</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="MovieStoreApi-1.0.0.war">
+      <element id="artifact" artifact-name="MovieStoreApi:war exploded" />
+    </root>
+  </artifact>
+</component>

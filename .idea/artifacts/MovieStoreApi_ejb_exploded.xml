@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="MovieStoreApi:ejb exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MovieStoreApi_ejb_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MovieStoreApi/ejb/EJB" />
+      <element id="javaee-facet-classes" facet="MovieStoreApi/ejb/EJB" />
+    </root>
+  </artifact>
+</component>
