@@ -21,7 +21,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="EclipseLink" />
         <datasource-mapping>
-          <factory-entry name="MovieStoreApiPU" value="20e8e154-ff99-4ed1-bc0f-b561c8605a8a" />
+          <factory-entry name="MovieStoreApiPU" value="10f37a1d-3d72-4f60-8a67-612f0e510b02" />
           <factory-entry name="MovieStorePU" value="20e8e154-ff99-4ed1-bc0f-b561c8605a8a" />
         </datasource-mapping>
         <naming-strategy-map />
@@ -69,7 +69,7 @@
     <orderEntry type="library" name="Maven: org.glassfish:javax.json:1.0.4" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.1.4.jre7" level="project" />
+    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:eclipselink:2.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" level="project" />
