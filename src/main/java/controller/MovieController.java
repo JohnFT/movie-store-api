@@ -21,6 +21,14 @@ public class MovieController {
         return this.moviesEJB.getAll();
     }
 
+    @GET
+    @Path("all")
+    @Produces("application/json")
+    public  List<MovieBean> getAll(@QueryParam("ids") String ids){
+
+        return this.moviesEJB.getByIds(ids);
+    }
+
     @POST
     @Consumes("application/json")
     @Produces("application/json")

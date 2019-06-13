@@ -11,11 +11,12 @@ public class Rent {
     private Date deliveryDate;
     private Integer price;
     private Integer account;
+    private Date date;
 
     public Rent(){
 
     }
-    public Rent(Integer id, Integer movie, Date initDate, Integer days, Date deliveryDate, Integer price, Integer account) {
+    public Rent(Integer id, Integer movie, Date initDate, Integer days, Date date,Date deliveryDate, Integer price, Integer account) {
         this.id = id;
         this.movie = movie;
         this.initDate = initDate;
@@ -23,6 +24,15 @@ public class Rent {
         this.deliveryDate = deliveryDate;
         this.price = price;
         this.account = account;
+        this.date = date;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Integer getId() {
@@ -91,6 +101,7 @@ public class Rent {
                 ", deliveryDate=" + deliveryDate +
                 ", price=" + price +
                 ", account=" + account +
+                ", date=" + date +
                 '}';
     }
 }

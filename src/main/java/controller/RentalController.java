@@ -24,6 +24,14 @@ public class RentalController {
     }
 
 
+
+    @GET()
+    @Path("account/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<RentalBean> fiendByUser(@PathParam("id") Integer id ){
+        return this.bean.findByUser(id);
+    }
+
     @GET()
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -32,10 +40,18 @@ public class RentalController {
     }
 
 
+
     @POST()
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public RentalBean add(Rent rental){
         return this.bean.add(rental);
+    }
+
+    @PUT()
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public RentalBean update(RentalBean rental){
+        return this.bean.update(rental);
     }
 }

@@ -13,6 +13,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless(name = "RentalEJB")
@@ -43,6 +44,20 @@ public class RentalEjbBean {
         return this.em.find(RentalBean.class, id);
     }
 
+    public List<RentalBean> findByUser(Integer id) {
+
+        List<RentalBean> rentals = new ArrayList<>();
+        Query query = this.em.createQuery("SELECT u FROM rental u WHERE u.account=:account");
+        query.setParameter("account", id);
+        try{
+            rentals = (List<RentalBean>) query.getResultList();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+        return rentals;
+    }
+
 
     public RentalBean add(Rent ren) {
         try {
@@ -59,6 +74,7 @@ public class RentalEjbBean {
             rental.setDays(ren.getDays());
             rental.setInitDate(ren.getInitDate());
             rental.setPrice(ren.getPrice());
+            rental.setDate(ren.getDate());
             rental.setStock(stock.getId());
 
 
@@ -84,7 +100,7 @@ public class RentalEjbBean {
                 return null;
             }
             em.getTransaction().begin();
-            em.persist(rental);
+            em.merge(rental);
             em.getTransaction().commit();
             return rental;
         } catch (Exception e) {
